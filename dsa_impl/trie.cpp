@@ -111,7 +111,6 @@ bool Trie::remove(TrieNode* u, string &word, int pos)
         return true;
     }
     bool status = remove(u -> next[word[pos] - 'a'], word, pos + 1);
-    // cout << word << ": " << word[pos] << " " << u -> next[word[pos] - 'a'] -> hasChildren() << endl;
     if (u -> next[word[pos] - 'a'] -> hasChildren() == false && u -> next[word[pos] - 'a'] -> cnt == 0)
     {
         delete u -> next[word[pos] - 'a'];
